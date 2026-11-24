@@ -1,11 +1,16 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyAeIfnyVS1voWGRx1G87zxbPu6XfhaIags",
-  authDomain: "jelajah-sekolahku.firebaseapp.com",
-  projectId: "jelajah-sekolahku",
-  storageBucket: "jelajah-sekolahku.firebasestorage.app",
-  messagingSenderId: "107226901219",
-  appId: "1:107226901219:web:3310bb812e474baaab73d6",
-  measurementId: "G-CW2DX7E0V3"
+export const firebaseConfig = {
+
+apiKey: "Alza...",
+
+authDomain: "Jelajah-sekolahku.firebaseapp.com",
+
+projectid: "jelajah-sekolahku",
+
+storageBucket: "Jelajah-sekolahku.firebasestorage.app",
+
+messagingSenderid: "107226901219",
+
+appld: "1:107226901219:web:..."
 };
 
 // Nilai yang wajib benar agar Firestore bisa dipakai.
