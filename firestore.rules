@@ -1,0 +1,29 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /laporan_fasilitas/{laporanId} {
+      // Prototype: publik boleh mengirim laporan dan membaca maksimal lima dokumen.
+      allow create: if request.resource.data.keys().hasAll([
+          'namaPelapor', 'lokasi', 'jenisLaporan', 'deskripsi', 'createdAt'
+        ])
+        && request.resource.data.keys().hasOnly([
+          'namaPelapor', 'lokasi', 'jenisLaporan', 'deskripsi', 'createdAt'
+        ])
+        && request.resource.data.namaPelapor is string
+        && request.resource.data.namaPelapor.size() > 0
+        && request.resource.data.namaPelapor.size() <= 60
+        && request.resource.data.lokasi is string
+        && request.resource.data.lokasi.size() > 0
+        && request.resource.data.jenisLaporan is string
+        && request.resource.data.jenisLaporan.size() > 0
+        && request.resource.data.deskripsi is string
+        && request.resource.data.deskripsi.size() > 0
+        && request.resource.data.deskripsi.size() <= 500
+        && request.resource.data.createdAt == request.time;
+      // Pembacaan hanya diizinkan untuk query yang membatasi hasil maksimal lima.
+      allow list: if request.query.limit != null && request.query.limit <= 5;
+      allow get: if false;
+      allow update, delete: if false;
+    }
+  }
+}

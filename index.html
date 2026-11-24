@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#176b87">
+  <title>Jelajah Sekolahku | SMK Negeri 11 Semarang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <a class="logo" href="#home" aria-label="Jelajah Sekolahku, beranda">
+        <span class="logo-icon">JS</span>
+        <span>
+          <strong>Jelajah Sekolahku</strong>
+          <small>SMK Negeri 11 Semarang</small>
+        </span>
+      </a>
+
+      <nav id="nav-menu" aria-label="Navigasi utama">
+        <a href="#home">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#denah">Denah</a>
+        <a href="#jelajah">Fasilitas</a>
+        <a href="#saran">Saran &amp; Laporan</a>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <span class="hero-label">SISTEM INFORMASI FASILITAS SEKOLAH</span>
+        <h1>Jelajahi Setiap Sudut <span>Sekolah Kita.</span></h1>
+        <p>Temukan informasi fasilitas, fungsi, dan aturan penggunaan di lingkungan SMK Negeri 11 Semarang.</p>
+        <a href="#jelajah" class="btn-primary">
+          Jelajahi Fasilitas <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="about section" id="tentang">
+      <div class="container about-content">
+        <div class="about-text">
+          <span class="section-label">TENTANG WEBSITE</span>
+          <h2>Informasi fasilitas <span>dalam satu tempat</span></h2>
+          <p>Jelajah Sekolahku adalah prototype sistem informasi fasilitas sekolah untuk membantu warga sekolah mengenali lokasi dan fungsi ruang.</p>
+          <p>Informasi di halaman ini disusun untuk keperluan pembelajaran dan demonstrasi, bukan data resmi sekolah.</p>
+
+          <a href="#denah" class="btn-secondary">
+            Lihat Denah <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="about-image">
+          <img src="Images/Smk.png" alt="Lingkungan sekolah SMK Negeri 11 Semarang">
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section section" id="denah">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">PETA LINGKUNGAN</span>
+          <h2>Denah <span>Sekolah</span></h2>
+          <p>Gunakan denah sebagai gambaran lingkungan sekolah.</p>
+        </div>
+
+        <figure class="map-card">
+          <img
+            src="assets/images/denah-sekolah.jpeg"
+            alt="Denah lingkungan SMK Negeri 11 Semarang"
+            id="school-map"
+          >
+          <figcaption>Denah lingkungan SMK Negeri 11 Semarang</figcaption>
+        </figure>
+
+        <div class="map-actions">
+          <button class="map-marker" data-place="Gedung A">Gedung A</button>
+          <button class="map-marker" data-place="Perpustakaan">Perpustakaan</button>
+          <button class="map-marker" data-place="Masjid">Masjid</button>
+          <button class="map-marker" data-place="Lab DKV">Laboratorium</button>
+          <button class="map-marker" data-place="Lapangan Basket">Lapangan</button>
+          <button class="map-marker" data-place="Parkiran">Parkiran</button>
+          <button class="map-marker" data-place="Gedung O">Gedung O</button>
+          <button class="map-marker" data-place="Gedung M">Gedung M</button>
+          <button class="map-marker" data-place="Gedung N">Gedung N</button>
+          <button class="map-marker" data-place="Gedung P">Gedung P</button>
+          <button class="map-marker" data-place="Gedung D">Gedung D</button>
+          <button class="map-marker" data-place="Lobby">Lobby</button>
+          <button class="map-marker" data-place="Teras Studio">Teras Studio</button>
+          <button class="map-marker" data-place="Ruang Gallery">Ruang Gallery</button>
+          <button class="map-marker" data-place="Kantin">Kantin</button>
+          <button class="map-marker" data-place="UKS">UKS</button>
+          <button class="map-marker" data-place="Koperasi">Koperasi</button>
+        </div>
+
+        <p class="map-hint">Pilih nama lokasi untuk membuka detail fasilitas.</p>
+
+        <a href="#jelajah" class="btn-secondary">
+          Lihat daftar fasilitas <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="explore section" id="jelajah">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">DIREKTORI FASILITAS</span>
+          <h2>Jelajahi Lingkungan <span>Sekolah</span></h2>
+          <p>Cari lokasi atau pilih kategori untuk menyaring daftar.</p>
+        </div>
+
+        <div class="stats-grid" aria-label="Ringkasan fasilitas">
+          <article class="stat-card">
+            <span class="stat-icon">⌖</span>
+            <p>Total lokasi</p>
+            <strong id="stat-total">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-icon">⌬</span>
+            <p>Laboratorium</p>
+            <strong id="stat-labs">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-icon">◉</span>
+            <p>Lapangan</p>
+            <strong id="stat-fields">0</strong>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-icon">▦</span>
+            <p>Gedung &amp; fasilitas lain</p>
+            <strong id="stat-buildings">0</strong>
+          </article>
+        </div>
+
+        <div class="directory-tools">
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" id="search-input" placeholder="Cari nama atau fungsi fasilitas..." aria-label="Cari fasilitas">
+          </label>
+
+          <div class="filter-row" role="group" aria-label="Filter kategori">
+            <button class="filter-btn active" data-category="Semua" aria-pressed="true">Semua</button>
+            <button class="filter-btn" data-category="Gedung" aria-pressed="false">Gedung</button>
+            <button class="filter-btn" data-category="Laboratorium" aria-pressed="false">Laboratorium</button>
+            <button class="filter-btn" data-category="Lapangan" aria-pressed="false">Lapangan</button>
+            <button class="filter-btn" data-category="Fasilitas Umum" aria-pressed="false">Fasilitas Umum</button>
+            <button class="filter-btn" data-category="Tempat Ibadah" aria-pressed="false">Tempat Ibadah</button>
+          </div>
+        </div>
+
+        <div class="result-info">
+          <p id="result-status" aria-live="polite">Menampilkan 0 dari 0 lokasi</p>
+        </div>
+
+        <div class="places-grid" id="places-container"></div>
+        <p class="no-result" id="no-result" role="status">
+          Belum ada lokasi yang cocok. Coba kata kunci atau kategori lain.
+        </p>
+      </div>
+    </section>
+
+    <section class="report-section section" id="saran">
+      <div class="container report-layout">
+        <div class="report-intro">
+          <span class="section-label">MASUKAN WARGA SEKOLAH</span>
+          <h2>Saran &amp; Laporan <span>Fasilitas</span></h2>
+          <p>Sampaikan saran atau laporkan kondisi fasilitas untuk keperluan demonstrasi prototype.</p>
+
+          <div class="prototype-note">
+            <strong>Prototype pembelajaran</strong>
+            <p>Laporan prototype disimpan di Firebase Firestore. Jangan masukkan data pribadi sensitif.</p>
+          </div>
+        </div>
+
+        <div class="saved-reports">
+          <div class="saved-reports-heading">
+            <h3>Laporan tersimpan <span id="report-count">0</span></h3>
+            <!-- Penghapusan laporan memerlukan autentikasi admin; tombol disembunyikan sampai tersedia. -->
+            <button class="clear-reports" id="clear-reports" type="button" hidden>
+              Hapus semua laporan
+            </button>
+          </div>
+
+          <ul id="report-list" aria-live="polite"></ul>
+        </div>
+      </div>
+
+      <form id="report-form" class="report-form" novalidate>
+        <label>
+          Nama pelapor <span>(wajib)</span>
+          <input name="reporter" type="text" maxlength="60" required placeholder="Nama panggilan">
+        </label>
+
+        <label>
+          Lokasi
+          <select name="location" id="report-location" required>
+            <option value="">Pilih lokasi</option>
+          </select>
+        </label>
+
+        <label>
+          Jenis laporan/saran
+          <select name="type" required>
+            <option value="">Pilih jenis</option>
+            <option>Saran</option>
+            <option>Kerusakan</option>
+            <option>Kebersihan</option>
+            <option>Keamanan</option>
+            <option>Lainnya</option>
+          </select>
+        </label>
+
+        <label>
+          Deskripsi
+          <textarea name="description" rows="4" maxlength="500" required placeholder="Ceritakan saran atau kondisi fasilitas..."></textarea>
+        </label>
+
+        <button class="btn-submit" type="submit">Kirim laporan</button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="banner">
+      <div class="container banner-content">
+        <span>JELAJAH SEKOLAHKU</span>
+        <h2>Kenali fasilitas, jaga bersama.</h2>
+        <p>Informasi yang mudah ditemukan membantu lingkungan sekolah semakin nyaman.</p>
+
+        <a href="#jelajah" class="btn-light">
+          Lihat fasilitas <span aria-hidden="true">↑</span>
+        </a>
+      </div>  
+    </section>
+  </main>
+
+  <footer id="kontak">
+    <div class="container footer-content">
+      <div>
+        <h2>Jelajah Sekolahku</h2>
+        <p>SMK Negeri 11 Semarang</p>
+      </div>
+
+      <div class="footer-info">
+        <p>Website ini adalah prototype Sistem Informasi Fasilitas Sekolah. Data yang ditampilkan digunakan untuk keperluan pembelajaran dan demonstrasi.</p>
+        <p>© 2026 Jelajah Sekolahku.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="place-modal" aria-hidden="true">
+    <section class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="close-modal" id="close-modal" aria-label="Tutup detail">×</button>
+
+      <div class="gallery" aria-label="Galeri foto lokasi">
+        <img src="" alt="" id="modal-image">
+        <button class="gallery-control gallery-prev" id="gallery-prev" type="button" aria-label="Foto sebelumnya">‹</button>
+        <button class="gallery-control gallery-next" id="gallery-next" type="button" aria-label="Foto berikutnya">›</button>
+        <p class="gallery-counter" id="gallery-counter" aria-live="polite"></p>
+        <div class="gallery-thumbnails" id="gallery-thumbnails" role="group" aria-label="Pilih foto fasilitas"></div>
+      </div>
+
+      <div class="modal-text">
+        <span class="section-label" id="modal-category"></span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+
+        <dl class="detail-list">
+          <div>
+            <dt>Fungsi</dt>
+            <dd id="modal-function"></dd>
+          </div>
+
+          <div>
+            <dt>Lokasi/area</dt>
+            <dd id="modal-area"></dd>
+          </div>
+
+          <div>
+            <dt>Jam penggunaan</dt>
+            <dd id="modal-hours"></dd>
+          </div>
+
+          <div>
+            <dt>Aturan penggunaan</dt>
+            <dd id="modal-rules"></dd>
+          </div>
+
+          <div>
+            <dt>Status</dt>
+            <dd id="modal-status"></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+  <!-- Firebase SDK modular resmi melalui CDN Google. -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
